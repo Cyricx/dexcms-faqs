@@ -60,14 +60,11 @@
     <Compile Include="Contexts\IDexCMSFaqsContext.cs" />
     <Compile Include="Repositories\FaqCategoryRepository.cs" />
     <Compile Include="Repositories\FaqItemRepository.cs" />
-    <Compile Include="Repositories\FaqSectionRepository.cs" />
     <Compile Include="Globals\FaqsRegister.cs" />
     <Compile Include="Interfaces\IFaqCategoryRepository.cs" />
     <Compile Include="Interfaces\IFaqItemRepository.cs" />
-    <Compile Include="Interfaces\IFaqSectionRepository.cs" />
     <Compile Include="Models\FaqCategory.cs" />
     <Compile Include="Models\FaqItem.cs" />
-    <Compile Include="Models\FaqSection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

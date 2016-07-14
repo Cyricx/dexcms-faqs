@@ -60,6 +60,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiModels\FaqCategoryApiModel.cs" />
+    <Compile Include="ApiModels\FaqItemApiModel.cs" />
+    <Compile Include="Controllers\FaqCategoriesController.cs" />
+    <Compile Include="Controllers\FaqItemsController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

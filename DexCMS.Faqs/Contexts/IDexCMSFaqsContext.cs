@@ -8,6 +8,5 @@ namespace DexCMS.Faqs.Contexts
     {
         DbSet<FaqCategory> FaqCategories { get; set; }
         DbSet<FaqItem> FaqItems { get; set; }
-        DbSet<FaqSection> FaqSections { get; set; }
     }
 }

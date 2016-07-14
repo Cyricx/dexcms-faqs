@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace DexCMS.Faqs.Models
 {
@@ -11,6 +12,8 @@ namespace DexCMS.Faqs.Models
         [StringLength(50)]
         public string Name { get; set; }
 
+        [Required]
+        public int DisplayOrder { get; set; }
 
         [Required]
         public bool IsActive { get; set; }
@@ -18,6 +21,6 @@ namespace DexCMS.Faqs.Models
         [Required]
         public int FaqSectionID { get; set; }
 
-        public virtual FaqSection FaqSection { get; set; }
+        public virtual ICollection<FaqItem> FaqItems { get; set; }
     }
 }

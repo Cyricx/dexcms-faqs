@@ -11,7 +11,6 @@ namespace DexCMS.Faqs.Globals
         {
             kernel.Bind<IFaqCategoryRepository>().To<FaqCategoryRepository>();
             kernel.Bind<IFaqItemRepository>().To<FaqItemRepository>();
-            kernel.Bind<IFaqSectionRepository>().To<FaqSectionRepository>();
         }
     }
 }
