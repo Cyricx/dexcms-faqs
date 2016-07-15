@@ -28,7 +28,7 @@ namespace DexCMS.Faqs.Mvc.Controllers
                 faqItems = new List<FaqItem>()
             };
 
-            foreach (var faqCat in categoryRepository.Items.Where(x => x.IsActive).OrderBy(x => x.DisplayOrder))
+            foreach (var faqCat in categoryRepository.Items.Where(x => x.IsActive).OrderBy(x => x.DisplayOrder).ToList())
             {
                 List<FaqItem> faqItems = faqCat.FaqItems.Where(x => x.IsActive).OrderBy(x => x.DisplayOrder).ToList();
 
