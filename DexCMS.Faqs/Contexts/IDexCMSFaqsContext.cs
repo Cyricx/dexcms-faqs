@@ -4,7 +4,7 @@ using DexCMS.Core.Infrastructure.Contexts;
 
 namespace DexCMS.Faqs.Contexts
 {
-    public interface IDexCMSFaqsContext: IDexCMSContext
+    public interface IDexCMSFaqsContext: IDexCMSContext, IDexCMSCoreContext
     {
         DbSet<FaqCategory> FaqCategories { get; set; }
         DbSet<FaqItem> FaqItems { get; set; }
