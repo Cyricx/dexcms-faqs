@@ -79,7 +79,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="DefaultViews\RootViews\Faqs\FAQ.cshtml" />
+    <None Include="DefaultViews\RootViews\FaqItems\Index.cshtml" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
