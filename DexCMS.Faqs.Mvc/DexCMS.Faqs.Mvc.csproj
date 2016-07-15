@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\FaqItemsController.cs" />
+    <Compile Include="FaqsMvcRoutes.cs" />
     <Compile Include="Models\DisplayFAQs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
