@@ -69,7 +69,7 @@
             var ajaxMarkHelp = function (type, id) {
                 $.ajax({
                     method: "GET",
-                    url: "@Url.Content("~/faqitems/")" + type + "/" + id
+                    url: "@Url.Content("~/faqs/")" + type + "/" + id
                 }).done(function (msg) {
                     alert('That FAQ answer has been marked as ' + type + '. Thank you.');
                     $('a[data-faq=' + id + ']').off('click').on('click', function (e) { e.preventDefault(); }).addClass('disabled');
