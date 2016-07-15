@@ -12,9 +12,9 @@ namespace DexCMS.Faqs.Repositories
             return _ctx;
         }
 
-        private IDexCMSFaqsContext _ctx { get; set; }
+        private IDexCMSContext _ctx { get; set; }
 
-        public FaqCategoryRepository(IDexCMSFaqsContext ctx)
+        public FaqCategoryRepository(IDexCMSContext ctx)
         {
             _ctx = ctx;
         }
