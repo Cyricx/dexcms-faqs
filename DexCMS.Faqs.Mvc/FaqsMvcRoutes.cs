@@ -15,12 +15,12 @@ namespace DexCMS.Faqs
             );
             routes.MapRoute(
                 name: "FaqsHelpful",
-                url: "faqs/helpful/:id",
+                url: "faqs/helpful/{id}",
                 defaults: new { category = "none", controller = "FaqItems", action = "Helpful", urlSegment = "faqs" }
             );
             routes.MapRoute(
                 name: "FaqsUnhelpful",
-                url: "faqs/unhelpful/:id",
+                url: "faqs/unhelpful/{id}",
                 defaults: new { category = "none", controller = "FaqItems", action = "Unhelpful", urlSegment = "faqs" }
             );
 
