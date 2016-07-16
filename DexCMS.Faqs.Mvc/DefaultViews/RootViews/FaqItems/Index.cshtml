@@ -124,8 +124,9 @@
             });
 
             var hash = window.location.hash;
-            $('a[href=' + hash + ']').click().parents('div.ui-accordion-content').prev().click();
-
+            if (hash) {
+                $('a[href=' + hash + ']').click().parents('div.ui-accordion-content').prev().click();
+            }
         });
     </script>
 }
