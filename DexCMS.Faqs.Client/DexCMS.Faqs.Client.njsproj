@@ -31,6 +31,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="Configurations\controlpanel.faqs.navigation.js" />
+    <Compile Include="Configurations\controlpanel.faqs.routes.js" />
+    <Compile Include="Configurations\index.js" />
     <Compile Include="Scripts\Applications\ControlPanel\Modules\Faqs\FaqCategories\faqCategories.list.controller.js" />
     <Compile Include="Scripts\Applications\ControlPanel\Modules\Faqs\FaqCategories\faqCategories.service.js" />
     <Compile Include="Scripts\Applications\ControlPanel\Modules\Faqs\FaqCategories\index.js" />
