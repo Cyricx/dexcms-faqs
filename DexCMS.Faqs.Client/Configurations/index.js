@@ -1,6 +1,5 @@
 ﻿var cpNavigation = require('./controlpanel.faqs.navigation'),
-    cpRoutes = require('./controlpanel.faqs.routes'),
-    globalSettings = require('./globals.tickets.settings.js');
+    cpRoutes = require('./controlpanel.faqs.routes');;
 
 module.exports = function (appPath, overrides) {
     overrides = overrides || {};
@@ -9,6 +8,5 @@ module.exports = function (appPath, overrides) {
     var settings = [];
     settings.push(cpNavigation(appPath, overrides.navigation));
     settings.push(cpRoutes(appPath));
-    settings.push(globalSettings(appPath));
     return settings;
 };
