@@ -3,14 +3,14 @@
 ], function (module) {
     module.directive('dexcmsFaqItemsList', [
         'dexCMSControlPanelSettings',
-        function (ttcmsSettings) {
+        function (dexcmsSettings) {
 
             return {
                 restrict: "E",
                 scope: {
                     "faqCategory": "="
                 },
-                templateUrl: ttcmsSettings.startingRoute + '/modules/faqs/faqitems/_faqitems.list.html',
+                templateUrl: dexcmsSettings.startingRoute + '/modules/faqs/faqitems/_faqitems.list.html',
                 controller: [
         '$scope',
         'FaqItems',
