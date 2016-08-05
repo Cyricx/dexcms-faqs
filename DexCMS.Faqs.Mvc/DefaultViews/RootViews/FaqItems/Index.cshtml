@@ -7,59 +7,66 @@
 <h2>@ViewBag.PageContent.Heading</h2>
 
 <div class="Faq">
-        <div id="faqCategories">
-            @foreach (var cat in Model.faqCategories)
+    <div id="faqCategories">
+        @foreach (var cat in Model.faqCategories)
             {
-                <h3>@cat.Name</h3>
-                <div>
-                    <ul class="faq-cat-questions">
-                        @foreach (var item in cat.FaqItems)
-                        {
-                            <li><a href="@("#faqItem" + item.FaqItemID)" data-faq-link="@item.FaqItemID">@item.Question</a></li>
-                        }
-                    </ul>
-                </div>
-            }
-
-        </div>
-        <div id="faqItems">
-            <div id="faq-instructions">
-                <h4>Please choose a question on the left.</h4>
+            <h3>@cat.Name</h3>
+            <div>
+                <ul class="faq-cat-questions">
+                    @foreach (var item in cat.FaqItems)
+                    {
+                        <li><a href="@("#faqItem" + item.FaqItemID)" data-faq-link="@item.FaqItemID">@item.Question</a></li>
+                    }
+                </ul>
             </div>
-            @foreach (var item in Model.faqItems)
+        }
+
+    </div>
+    <div id="faqItems">
+        <div id="faq-instructions">
+            @if (Model.faqCategories.Count > 0)
             {
-                <div id="@("faqItem" +item.FaqItemID)">
-                    <h4><span class="faq-Q">Q:</span>@item.Question</h4>
-                    <div>
-                        <span class="faq-A">A:</span>
-                        <div class="faq-answer">
-                            @Html.Raw(item.Answer)
-                        </div>
-                    </div>
-                    <div class="faq-item-footer">
-                        <div class="faq-stats">
-                            <span data-helpful="@item.FaqItemID" class="fa fa-thumbs-o-up success">
-                                @(item.HelpfulMarks.HasValue ? item.HelpfulMarks.Value : 0)
-                            </span>
-                            <span data-unhelpful="@item.FaqItemID" class="fa fa-thumbs-o-down danger">
-                                @(item.UnhelpfulMarks.HasValue ? item.UnhelpfulMarks.Value : 0)
-                            </span>
-                        </div>
-
-                        <div class="faq-helpful">
-                            <strong>Helpful?</strong>
-                            <a href="#" rel="nofollow" class="helpful-yes" data-faq="@item.FaqItemID">Yes</a>
-                            <a href="#" rel="nofollow" class="helpful-no" data-faq="@item.FaqItemID">No</a>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                    <p class="help-message"><em>Not finding the answer to your question? <a href="~/Contact">Contact Us!</a></em></p>
-                </div>
-
+                <h4>Please choose a question on the left.</h4>
+            }
+            else
+            {
+                <h4>Coming Soon...</h4>
             }
         </div>
+        @foreach (var item in Model.faqItems)
+            {
+            <div id="@("faqItem" +item.FaqItemID)">
+                <h4><span class="faq-Q">Q:</span>@item.Question</h4>
+                <div>
+                    <span class="faq-A">A:</span>
+                    <div class="faq-answer">
+                        @Html.Raw(item.Answer)
+                    </div>
+                </div>
+                <div class="faq-item-footer">
+                    <div class="faq-stats">
+                        <span data-helpful="@item.FaqItemID" class="fa fa-thumbs-o-up success">
+                            @(item.HelpfulMarks.HasValue ? item.HelpfulMarks.Value : 0)
+                        </span>
+                        <span data-unhelpful="@item.FaqItemID" class="fa fa-thumbs-o-down danger">
+                            @(item.UnhelpfulMarks.HasValue ? item.UnhelpfulMarks.Value : 0)
+                        </span>
+                    </div>
 
-        <div class="clear"></div>
+                    <div class="faq-helpful">
+                        <strong>Helpful?</strong>
+                        <a href="#" rel="nofollow" class="helpful-yes" data-faq="@item.FaqItemID">Yes</a>
+                        <a href="#" rel="nofollow" class="helpful-no" data-faq="@item.FaqItemID">No</a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <p class="help-message"><em>Not finding the answer to your question? <a href="~/Contact">Contact Us!</a></em></p>
+            </div>
+
+        }
+    </div>
+
+    <div class="clear"></div>
 </div>
 
 @section scripts {
@@ -95,7 +102,7 @@
                 $markTag.text(' ' + numValue);
             };
 
-            $('#faqCategories').accordion({collapsible: true});
+            $('#faqCategories').accordion({ collapsible: true });
 
             $('#faqItems > div').hide().first().show();
 
