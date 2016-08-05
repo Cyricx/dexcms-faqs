@@ -8,7 +8,7 @@
                 "icon": "fa-question-circle",
                 "subLinks": [
                     {
-                        "title": "Faqs",
+                        "title": "FAQs",
                         "href": overrides.faqcategories || "faqcategories"
                     }
                 ]
