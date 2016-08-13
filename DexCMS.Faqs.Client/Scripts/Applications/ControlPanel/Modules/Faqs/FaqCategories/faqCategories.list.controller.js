@@ -5,13 +5,9 @@
     app.controller('faqCategoriesListCtrl', [
         '$scope',
         'FaqCategories',
-        'DTOptionsBuilder',
-        'DTColumnBuilder',
-        '$compile',
-        '$window',
         '$stateParams',
         '$state',
-        function ($scope, FaqCategories, DTOptionsBuilder, DTColumnBuilder, $compile, $window, $stateParams, $state) {
+        function ($scope, FaqCategories, $stateParams, $state) {
             $scope.title = "Faqs";
             $scope.selectedCategory = null;
 
