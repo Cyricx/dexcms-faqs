@@ -23,14 +23,14 @@ namespace DexCMS.Faqs.Mvc.Initializers
                 new PageContent
                 {
                     Body = "",
-                    PageTitle = "Calendar",
+                    PageTitle = "Faqs",
                     ChangeFrequency = 0,
                     LastModified = Today,
                     AddToSitemap = false,
-                    Heading = "Calendar",
+                    Heading = "Faqs",
                     ContentAreaID = Public,
                     ContentCategoryID = null,
-                    UrlSegment = "calendar",
+                    UrlSegment = "faqs",
                     PageTypeID = SiteContent
                 }
             );
