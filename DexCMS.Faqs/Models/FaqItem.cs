@@ -26,6 +26,7 @@ namespace DexCMS.Faqs.Models
         public bool IsActive { get; set; }
 
         [Required]
+        [Column(TypeName="datetime")]
         public DateTime LastUpdated { get; set; }
 
         [Required]
