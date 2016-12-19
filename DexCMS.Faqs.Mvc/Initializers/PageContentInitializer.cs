@@ -3,21 +3,27 @@ using DexCMS.Base.Models;
 using DexCMS.Core.Infrastructure.Extensions;
 using DexCMS.Core.Infrastructure.Globals;
 using System;
-using System.Linq;
+using DexCMS.Base.Initializers.Helpers;
 
 namespace DexCMS.Faqs.Mvc.Initializers
 {
     class PageContentInitializer : DexCMSInitializer<IDexCMSBaseContext>
     {
+        
+        private AreasReference Areas { get; set; }
+        private PageTypesReference PageTypes { get; set; }
+        private LayoutTypesReference LayoutTypes { get; set; }
+
         public PageContentInitializer(IDexCMSBaseContext context) : base(context)
         {
+            Areas = new AreasReference(context);
+            PageTypes = new PageTypesReference(context);
+            LayoutTypes = new LayoutTypesReference(context);
         }
 
         public override void Run()
         {
             DateTime Today = DateTime.Now;
-            int Public = Context.ContentAreas.Where(x => x.Name == "Public").Select(x => x.ContentAreaID).Single();
-            int SiteContent = Context.PageTypes.Where(x => x.Name == "Site Content").Select(x => x.PageTypeID).Single();
 
             Context.PageContents.AddIfNotExists(x => x.PageTitle,
                 new PageContent
@@ -28,10 +34,12 @@ namespace DexCMS.Faqs.Mvc.Initializers
                     LastModified = Today,
                     AddToSitemap = false,
                     Heading = "Faqs",
-                    ContentAreaID = Public,
+                    ContentAreaID = Areas.Public,
                     ContentCategoryID = null,
                     UrlSegment = "faqs",
-                    PageTypeID = SiteContent
+                    PageTypeID = PageTypes.SiteContent,
+                    IsDisabled = false,
+                    LayoutTypeID = LayoutTypes.OneColumn
                 }
             );
             Context.SaveChanges();
