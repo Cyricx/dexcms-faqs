@@ -1,0 +1,22 @@
+﻿///<reference path="../../../../../node_modules/compass-mixins/lib/compass/css3/_box-sizing.scss" />
+///<reference path="../_faqs-variables.scss" />
+
+#faqCategories {
+    @include box-sizing(border-box);
+    background-color: $faqs-categories-background-color;
+
+    @media screen and (min-width: $page-break-medium) {
+        position: relative;
+        background-color: transparent;
+        float: left;
+        width: 40%;
+    }
+
+    .faq-cat-questions {
+        a {
+            &:hover, &.active {
+                color: $faqs-categories-question-hover-color;
+            }
+        }
+    }
+}

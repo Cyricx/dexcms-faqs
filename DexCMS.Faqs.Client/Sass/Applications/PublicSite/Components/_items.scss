@@ -1,0 +1,101 @@
+﻿///<reference path="../../../../../node_modules/compass-mixins/lib/compass/css3/_box-sizing.scss" />
+///<reference path="../_faqs-variables.scss" />
+
+#faqItems {
+    @include box-sizing(border-box);
+
+    @media screen and (min-width: $page-break-medium) {
+        float: right;
+        width: 59%;
+    }
+
+    h4 {
+        font-size: 2em;
+    }
+
+    span.faq-Q, span.faq-A {
+        color: $faqs-items-highlight-letter-color;
+        display: block;
+        width: 100%;
+        padding: .25em;
+        line-height: 60px;
+
+        @media screen and (min-width: $page-break-large) {
+            display: inline-block;
+            width: auto;
+        }
+    }
+
+    .faq-Q {
+        font-size: 2em;
+        line-height: 2em;
+    }
+
+    .faq-A {
+        font-size: 4em;
+        line-height: 4em;
+        float: left;
+    }
+
+    .faq-answer {
+        padding-top: 40px;
+        font-size: 1.25em;
+
+        p {
+            text-indent: 0;
+        }
+    }
+
+    .faq-stats, .faq-helpful {
+        float: left;
+        width: 49%;
+        text-align: center;
+    }
+
+    .faq-stats {
+        .fa {
+            padding: .5em;
+        }
+    }
+
+    .faq-helpful {
+        strong {
+            display: block;
+
+            @media screen and (min-width: $page-break-large) {
+                display: inline-block;
+            }
+        }
+
+        > a {
+            display: inline-block;
+            margin: 0 .5em;
+
+            &.disabled {
+                opacity: .5;
+                cursor: default;
+
+                &:hover {
+                    color: $faqs-items-helpful-hover-color;
+                }
+            }
+        }
+    }
+
+    .faq-item-footer {
+        clear: both;
+        border-bottom: 1px solid $faqs-items-footer-border-color;
+    }
+
+    .success {
+        color: $faqs-thumbs-up-color;
+    }
+
+    .danger {
+        color: $faqs-thumbs-down-color;
+    }
+
+    h3:focus {
+        outline: none;
+    }
+}

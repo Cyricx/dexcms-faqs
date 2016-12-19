@@ -41,11 +41,21 @@
     <Compile Include="Scripts\Applications\ControlPanel\Modules\Faqs\FaqItems\faqItems.service.js" />
     <Compile Include="Scripts\Applications\ControlPanel\Modules\Faqs\FaqItems\index.js" />
     <Content Include="package.json" />
+    <Content Include="Sass\Applications\PublicSite\Components\_instructions.scss" />
+    <Content Include="Sass\Applications\PublicSite\Components\_items.scss" />
+    <Content Include="Sass\Applications\PublicSite\Components\_categories.scss" />
+    <Content Include="Sass\Applications\PublicSite\_faqs-components.scss" />
+    <Content Include="Sass\Applications\PublicSite\_faqs-variables.scss" />
+    <Content Include="Sass\Applications\PublicSite\_faqs.scss" />
     <Content Include="Scripts\Applications\ControlPanel\Modules\Faqs\FaqCategories\faqCategories.list.html" />
     <Content Include="Scripts\Applications\ControlPanel\Modules\Faqs\FaqItems\_faqItems.list.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Configurations\" />
+    <Folder Include="Sass\" />
+    <Folder Include="Sass\Applications\" />
+    <Folder Include="Sass\Applications\PublicSite\" />
+    <Folder Include="Sass\Applications\PublicSite\Components\" />
     <Folder Include="Scripts\" />
     <Folder Include="Scripts\Applications\" />
     <Folder Include="Scripts\Applications\ControlPanel\" />
