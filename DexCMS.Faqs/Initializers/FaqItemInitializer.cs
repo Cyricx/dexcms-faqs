@@ -32,7 +32,7 @@ namespace DexCMS.Faqs.Initializers
                         FaqCategoryID = Categories.Some,
                         HelpfulMarks = 5,
                         IsActive = true,
-                        LastUpdated = new DateTime(),
+                        LastUpdated = DateTime.Now,
                         LastUpdatedBy = "Sample Data",
                         Question = "How do I yadda yadda?",
                         UnhelpfulMarks = 1
@@ -44,7 +44,7 @@ namespace DexCMS.Faqs.Initializers
                         FaqCategoryID = Categories.Some,
                         HelpfulMarks = 0,
                         IsActive = true,
-                        LastUpdated = new DateTime(),
+                        LastUpdated = DateTime.Now,
                         LastUpdatedBy = "Sample Data",
                         Question = "Can I something or other?",
                         UnhelpfulMarks = 5
@@ -55,7 +55,7 @@ namespace DexCMS.Faqs.Initializers
                         DisplayOrder = 0,
                         FaqCategoryID = Categories.Another,
                         IsActive = true,
-                        LastUpdated = new DateTime(),
+                        LastUpdated = DateTime.Now,
                         LastUpdatedBy = "Sample Data",
                         Question = "Where do I do this?"
                     }
