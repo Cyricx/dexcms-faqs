@@ -30,7 +30,8 @@ namespace DexCMS.Faqs.WebApi.Controllers
                 Name = x.Name,
                 IsActive = x.IsActive,
                 DisplayOrder = x.DisplayOrder,
-                ItemCount = x.FaqItems.Count
+                ItemCount = x.FaqItems.Count,
+                FaqSectionID = x.FaqSectionID
             }).ToList();
 
             return items;
@@ -52,13 +53,15 @@ namespace DexCMS.Faqs.WebApi.Controllers
                 Name = faqCategory.Name,
                 IsActive = faqCategory.IsActive,
                 DisplayOrder = faqCategory.DisplayOrder,
-                ItemCount = faqCategory.FaqItems.Count
+                ItemCount = faqCategory.FaqItems.Count,
+                FaqSectionID = faqCategory.FaqSectionID
             };
 
             return Ok(model);
         }
 
         //GET api/FaqCategories/byevent/1
+        //! TODO: Build based on section and section id
         [ResponseType(typeof(List<FaqCategoryApiModel>))]
         public IHttpActionResult GetFaqCategories(string bytype, int id)
         {
@@ -72,7 +75,8 @@ namespace DexCMS.Faqs.WebApi.Controllers
                     Name = x.Name,
                     IsActive = x.IsActive,
                     DisplayOrder = x.DisplayOrder,
-                    ItemCount = x.FaqItems.Count
+                    ItemCount = x.FaqItems.Count,
+
                 }).ToList();
             }
             else

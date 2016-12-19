@@ -22,5 +22,6 @@ namespace DexCMS.Faqs.Models
         public int FaqSectionID { get; set; }
 
         public virtual ICollection<FaqItem> FaqItems { get; set; }
+        public virtual FaqSection FaqSection { get; set; }
     }
 }

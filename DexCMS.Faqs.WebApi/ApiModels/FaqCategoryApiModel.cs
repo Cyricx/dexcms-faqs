@@ -8,5 +8,6 @@ namespace DexCMS.Faqs.WebApi.ApiModels
         public bool IsActive { get; set; }
         public int DisplayOrder { get; set; }
         public int ItemCount { get; set; }
+        public int FaqSectionID { get; set; }
     }
 }

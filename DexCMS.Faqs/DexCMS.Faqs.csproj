@@ -58,6 +58,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexts\IDexCMSFaqsContext.cs" />
+    <Compile Include="Initializers\FaqSectionInitializer.cs" />
+    <Compile Include="Initializers\FaqCategoryInitializer.cs" />
+    <Compile Include="Initializers\FaqItemInitializer.cs" />
+    <Compile Include="Initializers\FaqsInitializer.cs" />
+    <Compile Include="Initializers\Helpers\FaqSectionReference.cs" />
+    <Compile Include="Initializers\Helpers\FaqCategoryReference.cs" />
+    <Compile Include="Interfaces\IFaqSectionRepository.cs" />
+    <Compile Include="Models\FaqSection.cs" />
+    <Compile Include="Repositories\FaqSectionRepository.cs" />
     <Compile Include="Repositories\FaqCategoryRepository.cs" />
     <Compile Include="Repositories\FaqItemRepository.cs" />
     <Compile Include="Globals\FaqsRegister.cs" />

@@ -35,7 +35,7 @@
 
             $scope.openAddCategory = function () {
                 $scope.isAdding = true;
-                $scope.newCategory = { displayOrder: 0, isActive: true };
+                $scope.newCategory = { displayOrder: 0, isActive: true, faqSectionID: 1 };
             };
 
             $scope.clearAddCategory = function () {

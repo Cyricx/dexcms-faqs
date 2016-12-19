@@ -28,7 +28,7 @@ namespace DexCMS.Faqs.Mvc.Controllers
                 faqItems = new List<FaqItem>()
             };
 
-            foreach (var faqCat in categoryRepository.Items.Where(x => x.IsActive).OrderBy(x => x.DisplayOrder).ToList())
+            foreach (var faqCat in categoryRepository.Items.Where(x => x.IsActive && x.FaqSection.Name == "Public").OrderBy(x => x.DisplayOrder).ToList())
             {
                 List<FaqItem> faqItems = faqCat.FaqItems.Where(x => x.IsActive).OrderBy(x => x.DisplayOrder).ToList();
 
@@ -50,7 +50,7 @@ namespace DexCMS.Faqs.Mvc.Controllers
         {
             var faq = await itemsRepository.RetrieveAsync(id);
 
-            if (faq == null)
+            if (faq == null || faq.FaqCategory.FaqSection.Name != "Public")
             {
                 Response.StatusCode = (int)HttpStatusCode.BadRequest;
                 return Json(null, JsonRequestBehavior.AllowGet);
@@ -74,7 +74,7 @@ namespace DexCMS.Faqs.Mvc.Controllers
         {
             var faq = await itemsRepository.RetrieveAsync(id);
 
-            if (faq == null)
+            if (faq == null || faq.FaqCategory.FaqSection.Name != "Public")
             {
                 Response.StatusCode = (int)HttpStatusCode.BadRequest;
                 return Json(null, JsonRequestBehavior.AllowGet);
