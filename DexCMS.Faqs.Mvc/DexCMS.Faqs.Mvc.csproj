@@ -94,8 +94,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="DefaultViews\RootViews\FaqItems\Index.cshtml" />
-    <None Include="DefaultViews\RootViews\Shared\Faqs\_NavigationLinks.cshtml" />
+    <None Include="Views\RootViews\FaqItems\Index.cshtml" />
+    <None Include="Views\RootViews\Shared\Faqs\_NavigationLinks.cshtml" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
