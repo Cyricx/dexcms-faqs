@@ -1,4 +1,5 @@
-﻿using DexCMS.Faqs.Interfaces;
+﻿using DexCMS.Core.Mvc.Globals;
+using DexCMS.Faqs.Interfaces;
 using DexCMS.Faqs.Models;
 using DexCMS.Faqs.Mvc.Models;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Web.Mvc;
 
 namespace DexCMS.Faqs.Mvc.Controllers
 {
-    public class FaqItemsController : Controller
+    public class FaqItemsController : DexCMSController
     {
         private IFaqItemRepository itemsRepository;
         private IFaqCategoryRepository categoryRepository;

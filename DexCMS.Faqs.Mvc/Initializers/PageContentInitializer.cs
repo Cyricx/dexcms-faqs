@@ -39,7 +39,8 @@ namespace DexCMS.Faqs.Mvc.Initializers
                     UrlSegment = "faqs",
                     PageTypeID = PageTypes.SiteContent,
                     IsDisabled = false,
-                    LayoutTypeID = LayoutTypes.OneColumn
+                    LayoutTypeID = LayoutTypes.OneColumn,
+                    RequiresLogin = false
                 }
             );
             Context.SaveChanges();
