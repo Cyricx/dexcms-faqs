@@ -2,12 +2,8 @@
 using DexCMS.Faqs.Contexts;
 using DexCMS.Faqs.Initializers.Helpers;
 using DexCMS.Faqs.Models;
-using System;
 using System.Collections.Generic;
-using System.Data.Entity.Migrations;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DexCMS.Faqs.Initializers
 {
@@ -20,9 +16,9 @@ namespace DexCMS.Faqs.Initializers
             Sections = new FaqSectionReference(context);
         }
 
-        public override void Run()
+        public override void Run(bool addDemoContent = true)
         {
-            if (Context.FaqCategories.Count() == 0)
+            if (addDemoContent && Context.FaqCategories.Count() == 0)
             {
                 Context.FaqCategories.AddRange(new List<FaqCategory>
                 {

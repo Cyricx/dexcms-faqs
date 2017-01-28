@@ -1,17 +1,25 @@
-﻿using DexCMS.Base.Contexts;
+﻿using System;
+using System.Collections.Generic;
+using DexCMS.Base.Contexts;
 using DexCMS.Core.Infrastructure.Globals;
 
 namespace DexCMS.Faqs.Mvc.Initializers
 {
-    public class FaqsMvcInitializer : DexCMSInitializer<IDexCMSBaseContext>
+    public class FaqsMvcInitializer : DexCMSLibraryInitializer<IDexCMSBaseContext>
     {
         public FaqsMvcInitializer(IDexCMSBaseContext context) : base(context)
         {
         }
 
-        public override void Run()
+        public override List<Type> Initializers
         {
-            (new PageContentInitializer(Context)).Run();
+            get
+            {
+                return new List<Type>
+                {
+                    typeof(PageContentInitializer)
+                };
+            }
         }
     }
 }

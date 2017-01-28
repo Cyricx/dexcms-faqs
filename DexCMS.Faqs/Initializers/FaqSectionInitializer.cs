@@ -2,11 +2,6 @@
 using DexCMS.Core.Infrastructure.Globals;
 using DexCMS.Faqs.Contexts;
 using DexCMS.Faqs.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DexCMS.Faqs.Initializers
 {
@@ -16,7 +11,7 @@ namespace DexCMS.Faqs.Initializers
         {
         }
 
-        public override void Run()
+        public override void Run(bool addDemoContent = true)
         {
             Context.FaqSections.AddIfNotExists(x => x.Name,
                 new FaqSection { Name = "Public", IsActive = true });

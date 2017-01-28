@@ -21,7 +21,7 @@ namespace DexCMS.Faqs.Mvc.Initializers
             LayoutTypes = new LayoutTypesReference(context);
         }
 
-        public override void Run()
+        public override void Run(bool addDemoContent = true)
         {
             DateTime Today = DateTime.Now;
 

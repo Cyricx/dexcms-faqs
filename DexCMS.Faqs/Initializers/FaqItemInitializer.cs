@@ -5,8 +5,6 @@ using DexCMS.Faqs.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DexCMS.Faqs.Initializers
 {
@@ -19,9 +17,9 @@ namespace DexCMS.Faqs.Initializers
             Categories = new FaqCategoryReference(context);
         }
 
-        public override void Run()
+        public override void Run(bool addDemoContent = true)
         {
-            if (Context.FaqItems.Count() == 0)
+            if (addDemoContent && Context.FaqItems.Count() == 0)
             {
                 Context.FaqItems.AddRange(new List<FaqItem>
                 {

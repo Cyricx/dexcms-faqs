@@ -2,23 +2,26 @@
 using DexCMS.Faqs.Contexts;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DexCMS.Faqs.Initializers
 {
-    public class FaqsInitializer : DexCMSInitializer<IDexCMSFaqsContext>
+    public class FaqsInitializer : DexCMSLibraryInitializer<IDexCMSFaqsContext>
     {
         public FaqsInitializer(IDexCMSFaqsContext context) : base(context)
         {
         }
 
-        public override void Run()
+        public override List<Type> Initializers
         {
-            (new FaqSectionInitializer(Context)).Run();
-            (new FaqCategoryInitializer(Context)).Run();
-            (new FaqItemInitializer(Context)).Run();
+            get
+            {
+                return new List<Type>
+                {
+                    typeof(FaqSectionInitializer),
+                    typeof(FaqCategoryInitializer),
+                    typeof(FaqItemInitializer)
+                };
+            }
         }
     }
 }
