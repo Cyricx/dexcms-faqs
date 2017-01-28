@@ -1,8 +1,8 @@
-﻿using DexCMS.Core.Infrastructure.Repositories;
+﻿using DexCMS.Core.Repositories;
 using DexCMS.Faqs.Models;
 using DexCMS.Faqs.Interfaces;
 using DexCMS.Faqs.Contexts;
-using DexCMS.Core.Infrastructure.Contexts;
+using DexCMS.Core.Contexts;
 namespace DexCMS.Faqs.Repositories
 {
     public class FaqSectionRepository : AbstractRepository<FaqSection>, IFaqSectionRepository

@@ -1,4 +1,4 @@
-﻿using DexCMS.Core.Infrastructure.Globals;
+﻿using DexCMS.Core.Globals;
 using DexCMS.Faqs.Contexts;
 using DexCMS.Faqs.Initializers.Helpers;
 using DexCMS.Faqs.Models;

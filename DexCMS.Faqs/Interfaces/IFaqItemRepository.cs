@@ -1,4 +1,4 @@
-﻿using DexCMS.Core.Infrastructure.Interfaces;
+﻿using DexCMS.Core.Interfaces;
 using DexCMS.Faqs.Models;
 
 namespace DexCMS.Faqs.Interfaces

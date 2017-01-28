@@ -1,7 +1,7 @@
 ﻿using DexCMS.Base.Contexts;
 using DexCMS.Base.Models;
-using DexCMS.Core.Infrastructure.Extensions;
-using DexCMS.Core.Infrastructure.Globals;
+using DexCMS.Core.Extensions;
+using DexCMS.Core.Globals;
 using System;
 using DexCMS.Base.Initializers.Helpers;
 
