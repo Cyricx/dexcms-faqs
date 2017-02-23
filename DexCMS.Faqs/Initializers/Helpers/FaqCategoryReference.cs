@@ -14,8 +14,8 @@ namespace DexCMS.Faqs.Initializers.Helpers
 
         public FaqCategoryReference(IDexCMSFaqsContext context)
         {
-            Some = context.FaqCategories.Where(x => x.Name == "Some Category").Select(x => x.FaqCategoryID).Single();
-            Another = context.FaqCategories.Where(x => x.Name == "Another Category").Select(x => x.FaqCategoryID).Single();
+            Some = context.FaqCategories.Where(x => x.Name == "Some Category").Select(x => x.FaqCategoryID).SingleOrDefault();
+            Another = context.FaqCategories.Where(x => x.Name == "Another Category").Select(x => x.FaqCategoryID).SingleOrDefault();
         }
     }
 }

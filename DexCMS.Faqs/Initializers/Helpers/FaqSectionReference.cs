@@ -13,7 +13,7 @@ namespace DexCMS.Faqs.Initializers.Helpers
 
         public FaqSectionReference(IDexCMSFaqsContext context)
         {
-            Public = context.FaqSections.Where(x => x.Name == "Public").Select(x => x.FaqSectionID).Single();
+            Public = context.FaqSections.Where(x => x.Name == "Public").Select(x => x.FaqSectionID).SingleOrDefault();
         }
     }
 }

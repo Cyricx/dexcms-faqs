@@ -23,27 +23,30 @@ namespace DexCMS.Faqs.Mvc.Initializers
 
         public override void Run(bool addDemoContent = true)
         {
-            DateTime Today = DateTime.Now;
+            if (addDemoContent)
+            {
+                DateTime Today = DateTime.Now;
 
-            Context.PageContents.AddIfNotExists(x => x.PageTitle,
-                new PageContent
-                {
-                    Body = "",
-                    PageTitle = "Faqs",
-                    ChangeFrequency = 0,
-                    LastModified = Today,
-                    AddToSitemap = false,
-                    Heading = "Faqs",
-                    ContentAreaID = Areas.Public,
-                    ContentCategoryID = null,
-                    UrlSegment = "faqs",
-                    PageTypeID = PageTypes.SiteContent,
-                    IsDisabled = false,
-                    LayoutTypeID = LayoutTypes.OneColumn,
-                    RequiresLogin = false
-                }
-            );
-            Context.SaveChanges();
+                Context.PageContents.AddIfNotExists(x => x.PageTitle,
+                    new PageContent
+                    {
+                        Body = "",
+                        PageTitle = "Faqs",
+                        ChangeFrequency = 0,
+                        LastModified = Today,
+                        AddToSitemap = false,
+                        Heading = "Faqs",
+                        ContentAreaID = Areas.Public,
+                        ContentCategoryID = null,
+                        UrlSegment = "faqs",
+                        PageTypeID = PageTypes.SiteContent,
+                        IsDisabled = false,
+                        LayoutTypeID = LayoutTypes.OneColumn,
+                        RequiresLogin = false
+                    }
+                );
+                Context.SaveChanges();
+            }
         }
     }
 }
